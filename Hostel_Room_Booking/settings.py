@@ -20,13 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret! *****
 SECRET_KEY = 'i0xgaha(++2)09&zhs(s(v43ob1%j62&&@++$_2we*i3!n(bo5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 1
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1']
 
 # Application definition
 
@@ -53,6 +53,21 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# # SECURITY MIDDLEWARE # Source: https://github.com/django/django/blob/master/django/conf/global_settings.py
+# SECURE_HSTS_SECONDS = 3600
+# SECURE_SSL_REDIRECT = False
+# SECURE_HSTS_PRELOAD = False
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+#
+#
+# # SESSIONS #
+#
+# # Whether the session cookie should be secure (https:// only).
+# SESSION_COOKIE_SECURE = False
+#
+# # Settings for CSRF cookie.
+# CSRF_COOKIE_SECURE = False
 
 ROOT_URLCONF = 'Hostel_Room_Booking.urls'
 
